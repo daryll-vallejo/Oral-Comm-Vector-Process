@@ -40,7 +40,9 @@ double SRCC(double x, double y, int n) {
 
 This function calculates the Spearman Rank Correlation Coefficient (SRCC), which measures the rank correlation between two variables. The formula used is:
 
-##### SRCC = 1 - (6 * Σd^2) / (n * (n^2 - 1))
+```math
+SRCC = 1 - (6 * Σd^2) / (n * (n^2 - 1))
+```
 
 Here, `d^2` represents the squared difference between ranks, `n` is the number of observations, and the formula adjusts the correlation based on ranking discrepancies.
 
@@ -88,8 +90,10 @@ void simulate_feedback(double alpha, double beta, double gamma, double delta, do
 
 This function simulates the feedback process using a stochastic model. The feedback is accumulated and averaged over epochs to update the `oralcom.feedback` value. The updates to `x` and `y` are based on stochastic differential equations:
 
-##### dx = (alpha * x - beta * x^2) * dt + sigma_x * x * dW_x
-##### dy = (gamma * y - delta * y^2) * dt + sigma_y * y * dW_y
+```math
+dx = (alpha * x - beta * x^2) * dt + sigma_x * x * dW_x
+dy = (gamma * y - delta * y^2) * dt + sigma_y * y * dW_y
+```
 
 Here, `dW_x` and `dW_y` represent Gaussian noise terms. The feedback intensity is inversely related to noise, and the feedback is updated accordingly.
 
