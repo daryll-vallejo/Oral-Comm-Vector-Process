@@ -92,6 +92,8 @@ This function simulates the feedback process using a stochastic model. The feedb
 
 ```math
 dx = (alpha * x - beta * x^2) * dt + sigma_x * x * dW_x
+```
+```math
 dy = (gamma * y - delta * y^2) * dt + sigma_y * y * dW_y
 ```
 
