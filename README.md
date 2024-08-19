@@ -7,26 +7,6 @@ This project simulates a communication process where a source message is affecte
 
 ## Code Explanation
 
-### Includes and Typedef
-
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <time.h>
-
-typedef struct {
-    double source;
-    double receiver;
-    double noise;
-    double feedback;
-} OralCom;
-
-OralCom oralcom;
-```
-
-The code starts by including necessary libraries for input/output, mathematical functions, and time handling. It defines a `struct` to hold the parameters of the communication process.
-
 ### Spearman Rank Correlation Coefficient (SRCC)
 
 ```c
