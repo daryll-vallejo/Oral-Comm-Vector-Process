@@ -93,7 +93,7 @@ void update_receiver(int receiver_word_count) {
 This function updates the receiver's message based on the feedback received. It adjusts the receiver's value using a combination of feedback intensity and correlation metrics. The update is given by:
 
 ```math
-receiver = source + 0.5 * feedback + (receiver_word_count + (receiver_word_count * feedback^2) / source) / 100 + SRCC
+receiver = source + ½ * feedback + (rwc + (rwc * feedback^2) / source) / 100 + SRCC
 ```
 
 ## Limitations
