@@ -48,7 +48,7 @@ void simulate_feedback(double alpha, double beta, double gamma, double delta, do
         y += (gamma * y - delta * y * y) * dt + sigma_y * y * sqrt(dt) * epsilon_y;
         
         // Update feedback based on the final x value and noise level
-        double feedback_intensity = 1.0 / (1.0 + oralcom.noise); // Inverse relationship
+        double feedback_intensity = 1.0 / (1.0 + y); // Inverse relationship
         double feedback = x * feedback_intensity;
         
         // Accumulate feedback for averaging
